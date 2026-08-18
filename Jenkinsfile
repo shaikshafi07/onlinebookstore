@@ -70,7 +70,7 @@ pipeline {
         script {
           if (params.RUN_TESTS) {
               echo 'RUN_TESTS=true → Running Maven tests'
-              sh 'mvn clean test'
+              sh 'mvn clean package'
           } else {
               echo 'RUN_TESTS=false → Skipping Maven tests'
               sh 'mvn clean package -DskipTests'
